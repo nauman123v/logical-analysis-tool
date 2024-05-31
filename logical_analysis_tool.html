@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical Analysis Tool</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        .result { margin-top: 20px; padding: 10px; border: 1px solid #eee; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Analyze Sentence Logical Structure</h1>
+        <form id="analysisForm">
+            <label for="sentence">Enter a sentence:</label>
+            <input type="text" id="sentence" name="sentence" required>
+            <input type="submit" value="Analyze">
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('analysisForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const sentence = document.getElementById('sentence').value;
+            const result = `You entered: ${sentence}`; // Replace this line with your actual logic or API call
+            document.getElementById('result').innerText = result;
+        });
+    </script>
+</body>
+</html>
